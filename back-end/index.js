@@ -1,1 +1,1 @@
-console.log("hello , Bayartulga bichiv")
+console.log("hello , turshilt hhe")
