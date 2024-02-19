@@ -1,3 +1,5 @@
 
-console.log("enkhjargal bctsn")
+
+console.log("hello , hangai bichiv")
+
 
