@@ -1,1 +1,3 @@
-console.log("hello , Enhjargal bichiv")
+
+console.log("hello , Bayartulga bichiv")
+
