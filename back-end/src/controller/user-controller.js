@@ -56,32 +56,3 @@ export const getAllUsers = async (req, res) => {
       }
   };
   
-
-
-
-  export const login = async (req, res) => {
-      const body = req.body;
-  
-      if (body.email === undefined || body.password === undefined) {
-          return res.status(403).json({ message: "Email and password are required" });
-      }
-  
-      try {
-          const user = await UserModel.findOne({ email: body.email });
-  
-          if (!user) {
-              return res.status(405).json({ message: "User not found" });
-          }
-  
-          if (user.password === body.password) {
-              res.status(200).json({ user });
-          } else {
-              res.status(405).json({ message: "Password does not match" });
-          }
-      } catch (error) {
-          console.error('Error during login:', error);
-          res.status(500).json({ message: 'Internal server error' });
-      }
-  };
-  
-  
