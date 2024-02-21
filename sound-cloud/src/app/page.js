@@ -339,10 +339,10 @@ const Home = () => {
   </div>
 </div>
 
-<script
+{/* <script
   src="https://kit.fontawesome.com/23cecef777.js"
   crossorigin="anonymous"
-></script>
+></script> */}
 
    </div>
   );

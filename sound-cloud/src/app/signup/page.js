@@ -33,47 +33,66 @@ const Signup = () => {
         }, 3000);
       }
     };
+   
   
     return (
-      <div>
-        <h2>SignUp</h2>
+      <div class="flex    justify-center items-center flex-col h-[100vh]"> 
+      <div className="h-[1000px] w-[700px] border-2 border-white justify-center items-center flex-col shadow-white ">
+      <img src="./whitespo.png" className="h-10 flex"/>
+
+<div className="flex justify-center">
+
+        <h1 class="font-bold text-white text-[40px]" >Sign Up to start  
+        <h1 className="text-[#1ed760]">
+          listening
+          </h1></h1>
+</div>
         <form>
-          <div >
-            <input
+          <div  className="flex justify-center items-center flex-col mt-[30px]">
+            <h1 className="text-white  font-bold font-[30px]">Username</h1>
+            <div className="h-[48px] w-[324px] "
+            >
+            <input className=" text-black w-[324px] h-[48px] rounded-lg"
               onChange={(e) => setSignupData((prev) => ({ ...prev, name: e.target.value }))}
-            />
-            <label>Username</label>
+              />
+
+            </div>
           </div>
           <br></br>
-          <div>
-            <input
+          <div className="flex justify-center items-center flex-col">
+            <h1 className="text-white font-bold font-[30px]">  Email</h1>
+            <input className="text-white border-slate-300 w-[324px] h-[48px] rounded-lg"
               onChange={(e) => setSignupData((prev) => ({ ...prev, email: e.target.value }))}
-            />
-            <label>Email</label>
+              />
           </div>
           <br></br>
-          <div >
+          <div className="flex flex-col items-center">
+            <h1 className="text-white font-bold font-[30px]">Password</h1>
             <input
-              type="password"
-              onChange={(e) => setSignupData((prev) => ({ ...prev, password: e.target.value }))}
+            className="border-slate-300  text-white w-[324px] h-[48px] rounded-lg"
+            type="password"
+            onChange={(e) => setSignupData((prev) => ({ ...prev, password: e.target.value }))}
             />
-            <label>Password</label>
             {error && <p style={{ color: "red" }}>{error}</p>} 
           </div>
-          <div style={{ display: "flex", gap: "50px" }}>
+          <div style={{ display: "flex", justifyContent:"space-around" , marginTop:"30px"}}>
             <div>
-              <a onClick={handleSignup}>
-              
-                submit
+              <a onClick={handleSignup} >
+                  
+                  
+                  <button style={{height:"40px", width:"190px", color:"black", borderRadius:"30px", backgroundColor:"#1ed760"}}>Submit </button>
+                  
+                  
               </a>
             </div>
             <div>
               <Link href="/login">
-                <p style={{ color: "grey" }}>Login </p>
+                <button style={{height:"40px", width:"190px", color:"black", borderRadius:"30px", backgroundColor:"#1ed760"}}>Login </button>
               </Link>
             </div>
           </div>
         </form>
+            </div>
       </div>
     );
   };
