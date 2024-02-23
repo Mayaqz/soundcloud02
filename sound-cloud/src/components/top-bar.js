@@ -1,3 +1,6 @@
+"use client";
+import Link from "next/link";
+
 const Topbar = () =>{
     return(
         <div className="topbar">
@@ -22,7 +25,10 @@ const Topbar = () =>{
               <a href="#">Sign Up</a>
             </li>
           </ul>
+<Link href={"/login"}>
+
           <button type="button">Log In</button>
+          </Link>
         </div>
       </div>
     )

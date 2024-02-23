@@ -1,4 +1,5 @@
 "use client"
+import Link from 'next/link.js';
 import Script from 'next/script';
 import Topbar from '@/components/top-bar';
 import Sidebar from '@/components/side-bar';
