@@ -36,23 +36,25 @@ const Signup = () => {
    
   
     return (
+ 
       <div class="flex    justify-center items-center flex-col h-[100vh]"> 
-      <div className="h-[1000px] w-[700px] border-2 border-white justify-center items-center flex-col shadow-white ">
-      <img src="./whitespo.png" className="h-10 flex"/>
+      <div className="  justify-center items-center flex-col shadow-white ">
+      <img src="./whitespo.png" className="h-10 flex justify-start mr-[1500px] mt-[-100px]  "/>
 
-<div className="flex justify-center">
+<div className="flex justify-center mt-[200px]">
 
         <h1 class="font-bold text-white text-[40px]" >Sign Up to start  
-        <h1 className="text-[#1ed760]">
+        <br></br>
+        <span className="text-[#1ed760] ">
           listening
-          </h1></h1>
+          </span></h1>
 </div>
         <form>
           <div  className="flex justify-center items-center flex-col mt-[30px]">
             <h1 className="text-white  font-bold font-[30px]">Username</h1>
             <div className="h-[48px] w-[324px] "
             >
-            <input className=" text-black w-[324px] h-[48px] rounded-lg"
+            <input className=" text-black w-[324px] h-[48px] rounded-lg    "
               onChange={(e) => setSignupData((prev) => ({ ...prev, name: e.target.value }))}
               />
 
@@ -61,36 +63,51 @@ const Signup = () => {
           <br></br>
           <div className="flex justify-center items-center flex-col">
             <h1 className="text-white font-bold font-[30px]">  Email</h1>
-            <input className="text-white border-slate-300 w-[324px] h-[48px] rounded-lg"
+            <input className="text-white border-slate-300 w-[324px] h-[48px] rounded-lg"  
               onChange={(e) => setSignupData((prev) => ({ ...prev, email: e.target.value }))}
               />
           </div>
           <br></br>
           <div className="flex flex-col items-center">
-            <h1 className="text-white font-bold font-[30px]">Password</h1>
+            <h1 className="text-white font-bold font-[30px] flex ">Password</h1>
             <input
-            className="border-slate-300  text-white w-[324px] h-[48px] rounded-lg"
+            className="border-slate-300  text-white w-[324px] h-[48px] rounded-lg" 
             type="password"
             onChange={(e) => setSignupData((prev) => ({ ...prev, password: e.target.value }))}
             />
             {error && <p style={{ color: "red" }}>{error}</p>} 
           </div>
-          <div style={{ display: "flex", justifyContent:"space-around" , marginTop:"30px"}}>
-            <div>
+          {/* <div style={{ display: "flex" , marginTop:"30px"}}> */}
+            <div className="flex justify-center mt-6">
               <a onClick={handleSignup} >
                   
                   
-                  <button style={{height:"40px", width:"190px", color:"black", borderRadius:"30px", backgroundColor:"#1ed760"}}>Submit </button>
+                  <button style={{height:"50px", width:"340px", color:"black", borderRadius:"30px", backgroundColor:"#1ed760", fontWeight:"bolder"}}>Next </button>
                   
                   
               </a>
             </div>
-            <div>
-              <Link href="/login">
-                <button style={{height:"40px", width:"190px", color:"black", borderRadius:"30px", backgroundColor:"#1ed760"}}>Login </button>
-              </Link>
+            <div className="flex items-center gap-4 justify-center mt-6">
+
+            <div className="  h-[1px] w-[200px] bg-white">
             </div>
-          </div>
+            <h3 className="text-white">or</h3>
+            <div className="h-[1px] w-[200px] bg-white">
+            </div>
+            </div>
+            <div className="flex items-center justify-center mt-6">
+
+
+              <span className="text-white      ">Already have account? <span>
+                
+                
+              <Link href="/login" className="underline  text-[#1ed760]">
+                {/* <button style={{height:"40px", width:"190px", color:"black", borderRadius:"30px", backgroundColor:"#1ed760"}}>Login </button> */}
+                Log in here
+              </Link>
+                </span></span>
+            </div>
+          {/* </div> */}
         </form>
             </div>
       </div>
