@@ -36,7 +36,7 @@ const Home = () => {
     }
   };
   return (
-    <div>
+    <div className="">
       <h2>Login</h2>
       <form>
         <div>
