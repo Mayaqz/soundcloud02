@@ -31,7 +31,6 @@ const Signup = () => {
         setTimeout(() => {
           setError(null);
         }, 3000);
-      }
     };
    
   
