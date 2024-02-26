@@ -19,10 +19,13 @@ const Topbar = () =>{
             </li>
             <li className="divider">|</li>
             <li>
-              <a href="#">Sign Up</a>
+              <a href="/signup">Sign Up</a>
             </li>
           </ul>
+          <a href="/login">
+
           <button type="button">Log In</button>
+          </a>
         </div>
       </div>
     )

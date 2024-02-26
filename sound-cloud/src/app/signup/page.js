@@ -33,14 +33,14 @@ const Signup = () => {
         }, 3000);
     };
    
-  
+    }
     return (
  
       <div class="flex    justify-center items-center flex-col h-[100vh]"> 
       <div className="  justify-center items-center flex-col shadow-white ">
-      <img src="./whitespo.png" className="h-10 flex justify-start mr-[1500px] mt-[-100px]  "/>
+      <img src="./whitespo.png" className="h-10 flex justify-start mr-[2000px]  mt-[-200px]"/>
 
-<div className="flex justify-center mt-[200px]">
+     <div className="flex justify-center mt-[200px]">
 
         <h1 class="font-bold text-white text-[40px]" >Sign Up to start  
         <br></br>
@@ -55,23 +55,29 @@ const Signup = () => {
             >
             <input className=" text-black w-[324px] h-[48px] rounded-lg    "
               onChange={(e) => setSignupData((prev) => ({ ...prev, name: e.target.value }))}
+
+              placeholder="Username"
               />
 
             </div>
           </div>
           <br></br>
           <div className="flex justify-center items-center flex-col">
-            <h1 className="text-white font-bold font-[30px]">  Email</h1>
-            <input className="text-white border-slate-300 w-[324px] h-[48px] rounded-lg"  
+            <h1 className="text-black font-bold font-[30px]">  Email</h1>
+            <input className="text-black border-slate-300 w-[324px] h-[48px] rounded-lg"  
+
+            placeholder="Email"
               onChange={(e) => setSignupData((prev) => ({ ...prev, email: e.target.value }))}
               />
           </div>
           <br></br>
           <div className="flex flex-col items-center">
-            <h1 className="text-white font-bold font-[30px] flex ">Password</h1>
+            <h1 className="text-black font-bold font-[30px] flex "  >Password</h1>
             <input
-            className="border-slate-300  text-white w-[324px] h-[48px] rounded-lg" 
+            className="border-slate-300  text-black w-[324px] h-[48px] rounded-lg" 
             type="password"
+
+            placeholder="Password"
             onChange={(e) => setSignupData((prev) => ({ ...prev, password: e.target.value }))}
             />
             {error && <p style={{ color: "red" }}>{error}</p>} 
@@ -97,7 +103,7 @@ const Signup = () => {
             <div className="flex items-center justify-center mt-6">
 
 
-              <span className="text-white      ">Already have account? <span>
+              <span className="text-white  ">Already have account? <span>
                 
                 
               <Link href="/login" className="underline  text-[#1ed760]">
@@ -111,6 +117,7 @@ const Signup = () => {
             </div>
       </div>
     );
-  };
+  
+}
   
   export default Signup;

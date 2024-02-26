@@ -1,4 +1,6 @@
-const sidebar = () => {
+import { Cookies } from "@/components/cookies.js";
+
+const sidebar = () => { 
     return(
 <div className="sidebar">
   <div className="logo">
@@ -53,10 +55,10 @@ const sidebar = () => {
   <div className="policies">
     <ul>
       <li>
-        <a href="#">Cookies</a>
+        <a href="/cookies">Cookies</a>
       </li>
       <li>
-        <a href="#">Privacy</a>
+        <a href="/privacy">Privacy</a>
       </li>
     </ul>
   </div>
